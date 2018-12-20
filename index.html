@@ -51,7 +51,68 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+		<style>
+			body {
+				background-color: #fff;
+				font-family: Arial;
+			}
 
+			* {
+				box-sizing: border-box;
+			}
+			.row {
+				margin: 8px -16px;
+			}
+			h1 {
+				font-size: 50px;
+				word-break: break-all;
+			}
+			/* Add padding BETWEEN each column */
+			.row,
+			.row > .column {
+				padding: 8px;
+			}
+			h3{
+				margin-top: 15px;
+			}
+
+			/* Create four equal columns that floats next to each other */
+			.column {
+				float: left;
+				width: 25%;
+			}
+
+			/* Clear floats after rows */
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			/* Content */
+			.content {
+				background-color: #f3f3f340;
+				padding: 10px;
+			}
+
+			/* Responsive layout - makes a two column-layout instead of four columns */
+			@media screen and (max-width: 900px) {
+				.column {
+					width: 50%;
+				}
+			}
+
+			/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+			@media screen and (max-width: 600px) {
+				.column {
+					width: 100%;
+				}
+			}
+			.content-description{
+				max-height: 200px;
+				min-height: 200px;
+			}
+		</style>
 	</head>
 	<body>
 		
@@ -67,8 +128,7 @@
 				<div class="col-xs-10 text-right menu-1 main-nav">
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="our-team">Our Project</a></li>
+						<li><a href="#" data-nav-section="our-team">Latest Project</a></li>
 						<li><a href="#" data-nav-section="practice-areas">Expertise</a></li>
 						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
 					</ul>
@@ -99,88 +159,81 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1>Our Project</h1>
+					<h1>Latest Project</h1>
 					<p class="sub">Here are some projects we have done successfully.</p>
-					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our Project</p>
-				</div>
-			</div>
-			<div class="row team-item gtco-team">
-				<div class="col-md-6 col-md-pull-1 animate-box"  data-animate-effect="fadeInLeft">
-					<div class="img-shadow">
-						<img src="images/partograf.png" class="img-responsive" alt="Slick">
-					</div>
-				</div>
-				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-					<h2>Partograf</h2>
-					<p>Partograf is a composite graphical record of key data (maternal and fetal) during labour entered against time on a single sheet of paper. Relevant measurements might include statistics such as cervical dilation, fetal heart rate, duration of labour and vital sign </p>
+					<!--<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our Project</p>-->
 				</div>
 			</div>
 
-			<div class="row team-item gtco-team-reverse">
-				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/e-commerce.png" class="img-responsive" alt="E Commerce">
+			<div class="row">
+				<div class="column">
+					<div class="content">
+						<img src="images/hmvm.png" alt="HmVM" style="width:100%">
+						<h3>Hello Beauty VM</h3>
+						<p class="content-description">This application build using react native. You can refer to this <a href="https://play.google.com/store/apps/details?id=com.hellobeauty.vendor" target="_blank">Link</a> </p>
 					</div>
 				</div>
-				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<h2>E-Commerce</h2>
-					<p>This website is built using the Opencart framework. Please refer to this <a href="https://asiaprosound.com/" target="_blank">link</a> for futher information.</p>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/hb.png" alt="HmVM" style="width:100%">
+						<h3>Hello Beauty</h3>
+						<p class="content-description">This application build using react native. You can refer to this <a href="https://play.google.com/store/apps/details?id=com.hellobeauty.client" target="_blank">Link</a> </p>
+					</div>
 				</div>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/tracking.png" alt="HmVM" style="width:100%">
+						<h3>Tracking System</h3>
+						<p class="content-description">This application build using native android. This application for tracking driver and sales when visit customer</p>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/partograf.png" alt="HmVM" style="width:100%">
+						<h3>Partograf</h3>
+						<p class="content-description">Partograf is a composite graphical record of key data (maternal and fetal) during labour entered against time on a single sheet of paper.  You can refer to this <a href="https://play.google.com/store/apps/details?id=id.merahmuda.partograph" target="_blank">Link</a> </p>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/slick.jpeg" alt="HmVM" style="width:100%">
+						<h3>Slick</h3>
+						<p class="content-description"> This application build with hybrid technology. Ionic and Angularjs are the right way to build applications quickly and can be used on Android and IOS. Please refer to this <a href="https://goo.gl/UPLDra" target="_blank">link</a> for see application  </p>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/ebppkb.png" alt="HmVM" style="width:100%">
+						<h3>E-BPPKB</h3>
+						<p class="content-description">This application build with native android. This app is for recording resident data.</p>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="content">
+						<img src="images/sagara.png" alt="HmVM" style="width:100%">
+						<h3>Saga Movers</h3>
+						<p class="content-description">This application build with ionic. This app is for tracking latest item position.</p>
+					</div>
+				</div>
+				<!-- END GRID -->
 			</div>
 
-			<div class="row team-item gtco-team">
-				<div class="col-md-6 col-md-pull-1 animate-box"  data-animate-effect="fadeInLeft">
-					<div class="img-shadow">
-						<img src="images/slick.jpeg" class="img-responsive" alt="Slick">
-					</div>
-				</div>
-				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-					<h2>Slick</h2>
-					<p>This application build with hybrid technology. Ionic and Angularjs are the right way to build applications quickly and can be used on Android and IOS. Please refer to this <a href="https://goo.gl/UPLDra" target="_blank">link</a> for see application  </p>
-					<p>A new way to get things done ASAP, Connect your team to report, handle and manage all your problem seamlessly</p>
-					<ul>
-						<li>Snap and decide your level of urgency</li>
-						<li>Delegate and handle the problem seamlessly</li>
-						<li>Show progress about the problem by snapping back</li>
-						<li>Monitor all your problem and solution in one single app at your fingertips</li>
-					</ul>
-				</div>
+			<div class="content">
+				<h3>HRMS</h3>
+				<img src="images/hrms.png" alt="Bear" style="width:100%">
+				<p>A Human Resource Management System or HRIS (Human Resource Information System) is a form of HR software that combines a number of systems and processes to ensure the easy management of a business' employees and data. Human Resources Software is used by businesses to combine a number of necessary HR functions, such as storing employee data, managing payrolls, recruitment processes, benefits administration and keeping track of attendance records. </p>
 			</div>
 
-			<div class="row team-item gtco-team-reverse">
-				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/job.png" class="img-responsive" alt="Job Portal">
-					</div>
-				</div>
-				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<h2>Job Portal</h2>
-					<p>This website is built using the Laravel framework. Please refer to this <a href="http://job.grandtjokro.com/" target="_blank">link</a> for futher information.</p>
-				</div>
-			</div>
-
-			<div class="row team-item gtco-team">
-				<div class="col-md-6 col-md-pull-1 animate-box"  data-animate-effect="fadeInLeft">
-					<div class="img-shadow">
-						<img src="images/hrms.png" class="img-responsive" alt="Slick">
-					</div>
-				</div>
-				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-					<h2>HRMS</h2>
-					<p>A Human Resource Management System or HRIS (Human Resource Information System) is a form of HR software that combines a number of systems and processes to ensure the easy management of a business' employees and data. Human Resources Software is used by businesses to combine a number of necessary HR functions, such as storing employee data, managing payrolls, recruitment processes, benefits administration and keeping track of attendance records. </p>
-				</div>
-			</div>
-
-			<div class="row team-item gtco-team-reverse">
-				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/ebppkb.png" class="img-responsive" alt="Job Portal">
-					</div>
-				</div>
-				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<h2>E-BPPKB</h2>
-					<p>This application build with native android. This app is for recording resident data.</p>
-				</div>
+			<div class="content">
+				<h3>Job Portal</h3>
+				<img src="images/job.png" alt="Bear" style="width:100%">
+				<p>This website is built using the Laravel framework. Please refer to this <a href="http://job.grandtjokro.com/" target="_blank">link</a> for futher information.</p>
 			</div>
 
 		</div>
@@ -192,7 +245,7 @@
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
 					<h1>Expertise</h1>
 					<p class="sub">Our expertise can help imporve your business with the right technology.</p>
-					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our <span>Expertise</span></p>
+					<!--<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our <span>Expertise</span></p>-->
 				</div>
 			</div>
 			<div class="row">
@@ -206,7 +259,7 @@
 							<ul>
 								<li>Laravel</li>
 								<li>Symfony</li>
-								<li>Codeigniter</li>
+								<li>Phalcon</li>
 								<li>Opencart</li>
 							</ul>
 						</div>
@@ -220,7 +273,7 @@
 							<h3>Javascript</h3>
 							<ul>
 								<li>Angular 4</li>
-								<li>Nodejs</li>
+								<li>Vue</li>
 								<li>JQuery</li>
 							</ul>
 						</div>
@@ -236,6 +289,7 @@
 							<h3>Mobile Application</h3>
 							<ul>
 								<li>Native Android</li>
+								<li>React Native</li>
 								<li>Hybrid wiht Ionic and Angular 4</li>
 							</ul>
 						</div>
@@ -246,10 +300,10 @@
 							<span class="glyphicon glyphicon-shopping-cart"></span>
 						</div>
 						<div class="gtco-copy">
-							<h3>Operating System</h3>
+							<h3>Etc</h3>
 							<ul>
-								<li>Ubuntu</li>
-								<li>Windows</li>
+								<li>Git/SVN</li>
+								<li>Web service</li>
 							</ul>
 						</div>
 					</div>
